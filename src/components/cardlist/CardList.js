@@ -3,6 +3,9 @@ import React from 'react';
 import Card from '../card/Card';
 
 const CardList = ({robots}) => {
+    // if (true) {
+    //     throw new Error('Nooo!');
+    // } // to test errboundry component
     const cardArray = robots.map( (user, i) => {
      return (
         <Card 
