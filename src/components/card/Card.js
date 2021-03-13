@@ -1,5 +1,4 @@
 import React from 'react'; // to process JSX element
-import { shallow, mount, render } from 'enzyme';
 
 const Card = (props) => {
     const {id, name, email} = props; //destruturing
