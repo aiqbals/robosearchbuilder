@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Clock from '../components/clock/Clock';
+/* import Clock from '../components/clock/Clock';
 import CardList from '../components/cardlist/CardList';
 import Scroll from '../components/scroll/Scroll';
 import Searchbox from '../components/searchbox/Searchbox';
 //import {robots} from './robots';
 import ErrorBoundry from '../components/errorboundry/ErrorBoundry';
-import './App.css';
+import './App.css'; */
 
 import {requestRobots, setSearchField} from '../action';
+import Mainpage from '../components/mainpage/Mainpage';
 
 // parameter state comes from index.js provider store state(rootReducers)
 const mapStateToProps = state => {
@@ -39,13 +40,14 @@ class App extends Component {
         robots: [],
         searchField: ''
     } */
-    componentDidMount(){
+    //componentDidMount(){
         //console.log(this.props.store.getState()) - to check store reduceers 
         /* fetch('https://jsonplaceholder.typicode.com/users')
         .then( res => res.json())
         .then( users => this.setState({ robots: users })); */
-        this.props.onRequestRobots();
-    }
+
+        //this.props.onRequestRobots();
+    //}
 
     /* onSearchChange = (event) => {  
         //console.log(event.target.value);
@@ -55,7 +57,7 @@ class App extends Component {
     render() {
         //const { robots, searchField } = this.state;
         //const { robots } = this.props;
-        const { searchField, onSearchChange, robots, isPending } = this.props;
+        /* const { searchField, onSearchChange, robots, isPending } = this.props;
         const filteredRobot = robots.filter( robot => {
             return robot.name.toLowerCase().includes(searchField.toLowerCase());
         });
@@ -74,7 +76,9 @@ class App extends Component {
                         }
                     </Scroll>
                 </div> 
-        );  
+        ); */  
+
+        return <Mainpage {...this.props} />
     }
 }
 
